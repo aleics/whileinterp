@@ -7,4 +7,5 @@ Author: [Aleix Casanovas](https://github.com/aleics)
 * code review
 * add benchmark testing for improvements
 * add testing for every possible configuration
-* improve description and comments on the code for better understanding
+* better description
+* ~add comments on the code for better understanding~
