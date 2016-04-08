@@ -8,4 +8,4 @@ Author: [Aleix Casanovas](https://github.com/aleics)
 * add benchmark testing for improvements
 * add testing for every possible configuration
 * better description
-* ~add comments on the code for better understanding~
+* ~~add comments on the code for better understanding~~
