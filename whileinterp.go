@@ -177,12 +177,22 @@ func (p *program) isVarPresent(name string) bool {
 	return false
 }
 
+// addVar adds a variable in a program
+// return error
+func (p *program) addVar(newVar *variable) error {
+    if !p.isVarPresent(newVar.name) {
+        p.vars = append(p.vars, *newVar)
+        return nil
+    }    
+    return errors.New("addVar: variable '" + newVar.name + "' already present")
+}
+
 // setVar modifies a variable in a program
 // return error
-func (p *program) setVar(newVar variable) error {
+func (p *program) setVar(newVar *variable) error {
 	for i, v := range p.vars {
 		if v.name == newVar.name {
-			p.vars[i] = newVar
+			p.vars[i] = *newVar
 			return nil
 		}
 	}
@@ -286,7 +296,7 @@ func (p *program) parseProgram() error {
 				
 				v.value = val		
 						
-				p.vars = append(p.vars, *v) //add the variable to the program
+				p.addVar(v) //add the variable to the program
 			} else if pos := strings.Index(s.content, "="); pos != -1 { //if an assignment
 				v := new(variable)
 				v.name = strings.TrimSpace(s.content[:pos])
@@ -304,7 +314,7 @@ func (p *program) parseProgram() error {
 				}
 			
 				v.value = val 
-				p.setVar(*v) //set the value of the variable on the program
+				p.setVar(v) //set the value of the variable on the program
 			}
 		}
 	}

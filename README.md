@@ -5,7 +5,8 @@ Author: [Aleix Casanovas](https://github.com/aleics)
 
 ## TODO
 * code review
-* add benchmark testing for improvements
-* add testing for every possible configuration
 * better description
+* add additional functionalities
+* ~~add benchmark testing for improvements~~
+* ~~add testing for every possible configuration~~
 * ~~add comments on the code for better understanding~~
