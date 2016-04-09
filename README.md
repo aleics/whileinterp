@@ -1,6 +1,11 @@
 # whileinterp
 Personal project for academic purposes of an interpreter for the while programming language written in [Go](https://golang.org]).
 
+To get the package:
+```sh
+go get github.com/aleics/whileinterp
+```
+
 Author: [Aleix Casanovas](https://github.com/aleics)
 
 ## TODO
